@@ -8,7 +8,7 @@
   Cloud Hub Components Docs
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+These are components to help you kickstart your project and get going within hours with minimal configuration and installation steps. These components ships with the the dependencies required to work in any reactjs project.
 
 Please go to the [The documentation website](https://cloudhub-components.netlify.com). for more details.
 
