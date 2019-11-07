@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Cloud Hub Components Docs
+  cloudhub-components documentation
 </h1>
 
 These are components to help you kickstart your project and get going within hours with minimal configuration and installation steps. These components ships with the the dependencies required to work in any reactjs project.
