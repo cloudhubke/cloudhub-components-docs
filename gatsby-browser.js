@@ -8,12 +8,12 @@
 import React from "react"
 
 import { MDXProvider } from "@mdx-js/react"
-import { Text, Button, Block } from "cloudhub-components"
+import { Button, Block } from "cloudhub-components"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
-import Highlight, { defaultProps, Prism } from "prism-react-renderer"
-import sizes from "cloudhub-components/dist/theme/Sizes"
-import { fonts, colors } from "./src/theme"
+import Highlight, { defaultProps } from "prism-react-renderer"
+
+import { sizes } from "./src/theme"
 
 const SyntaxHighlighter = props => {
   const className = props.children.props.className || ""

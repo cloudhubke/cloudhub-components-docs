@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { Text, Block, Button } from "cloudhub-components"
 import { sizes, colors } from "../theme"
 
-import reactLogo from "../images/logo.svg"
+import reactLogo from "../images/react-logo.svg"
 import muiLogo from "../images/material-ui-logo.svg"
 import theming from "../images/theming.png"
 import documentation from "../images/documentation.svg"
@@ -36,8 +36,12 @@ const IndexPage = () => (
       <Text h3 mistyWhite center>
         We are ready to help you and your business move to the next level.
       </Text>
-      <a href="http://www.cloudhub.co.ke/contactus" target="_blank">
-        <Text h2 thin secondary>
+      <a
+        href="http://www.cloudhub.co.ke/contactus"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Text h2 light secondary>
           Talk To Us
         </Text>
       </a>
@@ -50,7 +54,7 @@ const IndexPage = () => (
         middle
         padding={sizes.padding}
       >
-        <img src={reactLogo} style={{ height: 200 }} />
+        <img alt="react" src={reactLogo} style={{ height: 200 }} />
         <Text center header>
           Build using React
         </Text>
@@ -66,11 +70,11 @@ const IndexPage = () => (
         middle
         padding={sizes.padding}
       >
-        <img src={muiLogo} style={{ height: 200 }} />
-        <Text canter header>
+        <img alt="Material Ui" src={muiLogo} style={{ height: 200 }} />
+        <Text center header>
           Powered by Material-UI
         </Text>
-        <Text canter>Set of carefully crafted from the material-ui team</Text>
+        <Text center>Set of carefully crafted from the material-ui team</Text>
       </Block>
 
       <Block
@@ -80,11 +84,11 @@ const IndexPage = () => (
         middle
         padding={sizes.padding}
       >
-        <img src={theming} style={{ height: 200 }} />
-        <Text canter header>
+        <img alt="Theming" src={theming} style={{ height: 200 }} />
+        <Text center header>
           CSS Theming
         </Text>
-        <Text canter>Apply themes to best suite your project</Text>
+        <Text center>Apply themes to best suite your project</Text>
       </Block>
 
       <Block
@@ -94,7 +98,7 @@ const IndexPage = () => (
         middle
         padding={sizes.padding}
       >
-        <img src={documentation} style={{ height: 200 }} />
+        <img alt="Updated" src={documentation} style={{ height: 200 }} />
         <Text header center>
           Updated & Well documented
         </Text>

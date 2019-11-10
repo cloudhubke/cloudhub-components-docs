@@ -5,22 +5,26 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import ThemeProvider from "cloudhub-components/dist/theme/ThemeProvider"
-import { fonts, colors, sizes } from "../theme"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import ThemeProvider from 'cloudhub-components/dist/theme/ThemeProvider';
+import { Block, Text, Container } from 'cloudhub-components';
+import { useRect } from 'cloudhub-components/dist/customhooks';
 
-import { Block, Text, Container } from "cloudhub-components"
-
-import { useMetrics } from "cloudhub-components/dist/customhooks"
-
-import Header from "./header"
-import "./layout.css"
-import Footer from "./Footer"
+import { fonts, colors, sizes } from '../theme';
+import Header from './Header';
+import './layout.css';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
-  const { height } = useMetrics()
+  const headerRef = React.useRef();
+
+  const rect = useRect(headerRef);
+
+  const headersize = rect || {};
+
+  const headerheight = Number(headersize.height || 0);
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -30,22 +34,19 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <ThemeProvider fonts={fonts} colors={colors}>
+    <ThemeProvider fonts={fonts} colors={colors} sizes={sizes}>
       <Block color={colors.gray4}>
+        <Header siteTitle={data.site.siteMetadata.title} ref={headerRef} />
         <Block
           flex={false}
           style={{
-            position: "relative",
-            height: sizes.navBarHeight,
-            zIndex: 1,
+            marginTop: headerheight || sizes.navBarHeight,
+            minHeight: `calc(100% - ${headerheight || sizes.navBarHeight}px)`,
           }}
         >
-          <Header siteTitle={data.site.siteMetadata.title} />
-        </Block>
-        <Block style={{ minHeight: `calc(${height - sizes.navBarHeight}px)` }}>
           <Container
             column
             color={colors.milkyWhite}
@@ -56,7 +57,7 @@ const Layout = ({ children }) => {
               paddingRight: 0,
             }}
           >
-            <Block style={{ minWidth: "100%" }}>{children}</Block>
+            <Block style={{ width: '100%' }}>{children}</Block>
           </Container>
         </Block>
         <Block flex={false}>
@@ -64,11 +65,11 @@ const Layout = ({ children }) => {
         </Block>
       </Block>
     </ThemeProvider>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

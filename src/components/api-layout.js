@@ -2,18 +2,21 @@ import React from "react"
 import { Block } from "cloudhub-components"
 import HomeLayout from "./home-layout"
 import { colors } from "../theme"
+import sizes from "cloudhub-components/dist/theme/Sizes"
 
 const ApiLayout = props => {
-  const [] = React.useState(0)
-
   return (
     <HomeLayout>
       <Block row>
-        <Block style={{ width: 250 }} flex={false} color={colors.gray3}>
+        <Block
+          style={{ width: 250, paddingTop: sizes.padding }}
+          flex={false}
+          color={colors.gray3}
+        >
           Menu
         </Block>
 
-        <Block>{props.children}</Block>
+        <Block style={{ paddingTop: sizes.padding }}>{props.children}</Block>
       </Block>
     </HomeLayout>
   )

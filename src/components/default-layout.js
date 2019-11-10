@@ -8,10 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import ThemeProvider from "cloudhub-components/dist/theme/ThemeProvider"
 import { fonts, colors, sizes } from "../theme"
 
 import { Block, Text, Container } from "cloudhub-components"
+import ThemeProvider from "cloudhub-components/dist/theme/ThemeProvider"
 
 import { useMetrics } from "cloudhub-components/dist/customhooks"
 
@@ -33,7 +33,7 @@ const DefaultLayout = ({ children }) => {
   `)
 
   return (
-    <ThemeProvider fonts={fonts} colors={colors}>
+    <ThemeProvider fonts={fonts} colors={colors} sizes={sizes}>
       <Block color={colors.gray4}>
         <Block
           flex={false}

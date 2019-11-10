@@ -1,14 +1,12 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { colors, sizes } from "../theme"
 import { Text, Block } from "cloudhub-components"
 
 const Footer = props => {
-  const [] = useState(0)
-
   return (
     <Block color={colors.dark} flex={false} padding={sizes.padding} center>
-      <Block row flex={false} center>
+      <Block row flex={false} center wrap>
         <Block flex={false} style={{ minWidth: 300 }}>
           <Text
             h5
@@ -16,14 +14,14 @@ const Footer = props => {
           >
             DOCS
           </Text>
-          <Link href="" style={{ marginBottom: 10 }}>
+          <Link to="/docs" style={{ marginBottom: 10 }}>
             <Text milkyWhite>Getting started</Text>
           </Link>
           <Link to="/api" style={{ marginBottom: 10 }}>
             <Text milkyWhite>Components and APIs</Text>
           </Link>
           <Link to="/docs" style={{ marginBottom: 10 }}>
-            <Text milkyWhite>More resources</Text>
+            <Text milkyWhite>React Native</Text>
           </Link>
         </Block>
 
@@ -39,6 +37,7 @@ const Footer = props => {
           </Link>
           <a
             href="https://twitter.com/cloudhubke"
+            rel="noopener noreferrer"
             target="_blank"
             style={{ marginBottom: 10 }}
           >
@@ -46,6 +45,7 @@ const Footer = props => {
           </a>
           <a
             href="https://github.com/cloudhubke"
+            rel="noopener noreferrer"
             target="_blank"
             style={{ marginBottom: 10 }}
           >
@@ -54,6 +54,7 @@ const Footer = props => {
           <a
             href="http://reactjs.org"
             target="_blank"
+            rel="noopener noreferrer"
             style={{ marginBottom: 10 }}
           >
             <Text milkyWhite>React</Text>
@@ -61,7 +62,7 @@ const Footer = props => {
         </Block>
       </Block>
       <Block flex={false} margin={[sizes.margin, 0]}>
-        <a href="https://www.cloudhub.co.ke">
+        <a href="https://www.cloudhub.co.ke" rel="noopener noreferrer">
           <Text h5 primary>
             © {new Date().getFullYear()},{` Cloud Hub Limited `}
           </Text>

@@ -1,33 +1,35 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import { Block, Text, Button } from "cloudhub-components"
-import { useMetrics } from "cloudhub-components/dist/customhooks"
-import sizes from "cloudhub-components/dist/theme/Sizes"
-import { colors, Images } from "../theme"
+import React from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import { Block, Text, Button, IconButton, Container } from 'cloudhub-components';
+import { useMetrics } from 'cloudhub-components/dist/customhooks';
+import Menu from '@material-ui/icons/Menu';
 
-const Header = ({ siteTitle }) => {
-  const { isMobile } = useMetrics()
+import sizes from 'cloudhub-components/dist/theme/Sizes';
+import { colors, Images } from '../theme';
+
+const Header = React.forwardRef((props, ref) => {
+  const { isMobile } = useMetrics();
 
   return (
     <Block
       flex={false}
       style={{
-        height: sizes.navBarHeight,
-        marginBottom: 2,
-        position: "relative",
+        position: 'fixed',
+        width: '100%',
+        top: 0,
+        zIndex: 1,
       }}
+      center
+      color={colors.mistyWhite}
+      shadow
     >
-      <Block
+      <Container
         flex={false}
-        style={{
-          position: "fixed",
-          right: 0,
-          left: 0,
-          top: 0,
-        }}
+        maxWidth={isMobile ? 'sm' : 'lg'}
+        style={{ margin: 0, padding: 0 }}
       >
-        <Block row shadow color={colors.milkyWhite} middle wrap>
+        <Block row wrap middle ref={ref}>
           {!isMobile && (
             <Link to="/" style={{ margin: 0, padding: 0 }}>
               <Block
@@ -46,62 +48,80 @@ const Header = ({ siteTitle }) => {
               </Block>
             </Link>
           )}
-          <Block row middle margin={[0, sizes.margin]}>
+          <Block
+            flex={false}
+            row
+            middle
+            margin={[0, sizes.margin]}
+            style={{ minWidth: 380 }}
+          >
             <Link to="/">
               <Text h3 primary>
-                {siteTitle}
+                {props.siteTitle}
               </Text>
             </Link>
           </Block>
-          <Block row>
-            <Link to="/docs">
-              <Button
-                color="primary"
-                style={{ height: sizes.navBarHeight, borderRadius: 0 }}
+
+          {isMobile && (
+            <Block flex={false} middle>
+              <IconButton>
+                <Menu size={24} />
+              </IconButton>
+            </Block>
+          )}
+
+          <Block right={!isMobile}>
+            <Block flex={false} row style={{ minWidth: 350 }}>
+              <Link to="/docs">
+                <Button
+                  // color="primary"
+                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
+                >
+                  <Text h6>Docs</Text>
+                </Button>
+              </Link>
+              <Link to="/api">
+                <Button
+                  // color="primary"
+                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
+                >
+                  <Text h6>API</Text>
+                </Button>
+              </Link>
+              <Link to="/blog">
+                <Button
+                  // color="primary"
+                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
+                >
+                  <Text h6>Blog</Text>
+                </Button>
+              </Link>
+              <a
+                href="https://github.com/cloudhubke/cloudhub-components"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Text h6>Docs</Text>
-              </Button>
-            </Link>
-            <Link to="/api">
-              <Button
-                primary
-                style={{ height: sizes.navBarHeight, borderRadius: 0 }}
-              >
-                <Text h6>API</Text>
-              </Button>
-            </Link>
-            <Link to="/blog">
-              <Button
-                primary
-                style={{ height: sizes.navBarHeight, borderRadius: 0 }}
-              >
-                <Text h6>Blog</Text>
-              </Button>
-            </Link>
-            <a
-              href="https://github.com/cloudhubke/cloudhub-components"
-              target="_blank"
-            >
-              <Button
-                primary
-                style={{ height: sizes.navBarHeight, borderRadius: 0 }}
-              >
-                <Text h6>Github</Text>
-              </Button>
-            </a>
+                <Button
+                  // color="primary"
+                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
+                >
+                  <Text h6>Github</Text>
+                </Button>
+              </a>
+            </Block>
           </Block>
         </Block>
-      </Block>
+      </Container>
     </Block>
-  )
-}
+  );
+});
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: '',
+};
 
-export default Header
+export default Header;
