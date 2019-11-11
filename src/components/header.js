@@ -72,28 +72,12 @@ const Header = React.forwardRef((props, ref) => {
 
           <Block right={!isMobile}>
             <Block flex={false} row style={{ minWidth: 350 }}>
-              <Link to="/docs">
+              <Link to="/docs/getting-started">
                 <Button
                   // color="primary"
                   style={{ height: sizes.navBarHeight, borderRadius: 0 }}
                 >
                   <Text h6>Docs</Text>
-                </Button>
-              </Link>
-              <Link to="/api">
-                <Button
-                  // color="primary"
-                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
-                >
-                  <Text h6>API</Text>
-                </Button>
-              </Link>
-              <Link to="/blog">
-                <Button
-                  // color="primary"
-                  style={{ height: sizes.navBarHeight, borderRadius: 0 }}
-                >
-                  <Text h6>Blog</Text>
                 </Button>
               </Link>
               <a

@@ -77,6 +77,7 @@ template {
 }
 a {
   text-decoration: none;
+  color: purple;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }

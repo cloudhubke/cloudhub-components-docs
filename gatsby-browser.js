@@ -5,19 +5,19 @@
  */
 
 // You can delete this file if you're not using it
-import React from "react"
+import React from 'react';
 
-import { MDXProvider } from "@mdx-js/react"
-import { Button, Block } from "cloudhub-components"
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
+import { MDXProvider } from '@mdx-js/react';
+import { Button, Block } from 'cloudhub-components';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
-import Highlight, { defaultProps } from "prism-react-renderer"
+import Highlight, { defaultProps } from 'prism-react-renderer';
 
-import { sizes } from "./src/theme"
+import { sizes, colors, fonts } from './src/theme';
 
 const SyntaxHighlighter = props => {
-  const className = props.children.props.className || ""
-  const matches = className.match(/language-(?<lang>.*)/)
+  const className = props.children.props.className || '';
+  const matches = className.match(/language-(?<lang>.*)/);
   return (
     <Highlight
       {...defaultProps}
@@ -25,7 +25,7 @@ const SyntaxHighlighter = props => {
       language={
         matches && matches.groups && matches.groups.lang
           ? matches.groups.lang
-          : ""
+          : ''
       }
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -40,13 +40,13 @@ const SyntaxHighlighter = props => {
         </pre>
       )}
     </Highlight>
-  )
-}
+  );
+};
 
 const LiveCode = props => {
   const editorprops = {
     ...defaultProps,
-  }
+  };
 
   return (
     <LiveProvider
@@ -59,45 +59,43 @@ const LiveCode = props => {
       <LiveEditor {...editorprops} />
       <LiveError />
     </LiveProvider>
-  )
-}
+  );
+};
 
 const components = {
   wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
   pre: props => {
-    if (props.children.props["react-live"]) {
-      return <LiveCode {...props} />
-    } else {
-      return <SyntaxHighlighter {...props} />
+    if (props.children.props['react-live']) {
+      return <LiveCode {...props} />;
     }
+    return <SyntaxHighlighter {...props} />;
   },
   playground: props => {
     const editorprops = {
       ...defaultProps,
-    }
+    };
 
-    delete editorprops.Prism
+    delete editorprops.Prism;
+
 
     return (
-      <Block paper>
+      <Block flex={false} paper margin={[sizes.margin, 0]}>
         <LiveProvider
           code={props.children.trim()}
           language="jsx"
-          scope={props.scope}
+          scope={{ ...props.scope, colors, sizes, fonts }}
         >
-          <Block margin={[sizes.margin, 0]}>
+          <Block margin={[sizes.margin, 0]} padding={sizes.padding}>
             <LivePreview />
           </Block>
-          <Block margin={[sizes.margin, 0]}>
+          <Block>
             <LiveEditor {...editorprops} />
           </Block>
           <LiveError />
         </LiveProvider>
       </Block>
-    )
+    );
   },
-}
+};
 
-export const wrapRootElement = ({ element }) => {
-  return <MDXProvider components={components}>{element}</MDXProvider>
-}
+export const wrapRootElement = ({ element }) => <MDXProvider components={components}>{element}</MDXProvider>;
