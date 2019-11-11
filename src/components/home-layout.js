@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import ThemeProvider from 'cloudhub-components/dist/theme/ThemeProvider';
 import { Block, Text, Container } from 'cloudhub-components';
-import { useRect } from 'cloudhub-components/dist/customhooks';
+import { useRect, useMetrics } from 'cloudhub-components/dist/customhooks';
 
 import { fonts, colors, sizes } from '../theme';
 import Header from './Header';
@@ -20,6 +20,7 @@ import Footer from './Footer';
 const Layout = ({ children }) => {
   const headerRef = React.useRef();
 
+  const { height } = useMetrics();
   const rect = useRect(headerRef);
 
   const headersize = rect || {};
@@ -44,7 +45,8 @@ const Layout = ({ children }) => {
           flex={false}
           style={{
             marginTop: headerheight || sizes.navBarHeight,
-            minHeight: `calc(100% - ${headerheight || sizes.navBarHeight}px)`,
+            minHeight: `calc(${height
+              - (headerheight || sizes.navBarHeight)}px)`,
           }}
         >
           <Container

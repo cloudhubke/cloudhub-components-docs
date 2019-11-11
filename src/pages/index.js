@@ -1,28 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import HomeLayout from "../components/home-layout"
+import { Text, Block, Button } from 'cloudhub-components';
+import HomeLayout from '../components/home-layout';
 
-import SEO from "../components/seo"
-import { Text, Block, Button } from "cloudhub-components"
-import { sizes, colors } from "../theme"
+import SEO from '../components/seo';
+import { sizes, colors } from '../theme';
 
-import reactLogo from "../images/react-logo.svg"
-import muiLogo from "../images/material-ui-logo.svg"
-import theming from "../images/theming.png"
-import documentation from "../images/documentation.svg"
+import reactLogo from '../images/react-logo.svg';
+import muiLogo from '../images/material-ui-logo.svg';
+import theming from '../images/theming.png';
+import documentation from '../images/documentation.svg';
 
 const IndexPage = () => (
   <HomeLayout>
     <SEO title="Home" />
 
     <Block flex={false} color={colors.purple}>
-      <Block style={{ minHeight: 250 }} middle center padding={sizes.padding}>
+      <Block flex={false} style={{}} padding={sizes.padding}>
         <Text center h2 mistyWhite semibold>
           React components to help you get going with your project
         </Text>
       </Block>
-      <Block middle center padding={sizes.padding}>
+      <Block flex={false} middle center padding={sizes.padding}>
         <Link to="/docs">
           <Button contained rounded large color={colors.secondary}>
             <Text button milkyWhite bold>
@@ -46,7 +46,7 @@ const IndexPage = () => (
         </Text>
       </a>
     </Block>
-    <Block row wrap padding={sizes.padding} center middle>
+    <Block flex={false} row wrap padding={sizes.padding} center middle>
       <Block
         flex={false}
         style={{ width: 380, height: 380, marginRight: sizes.margin }}
@@ -109,6 +109,6 @@ const IndexPage = () => (
       </Block>
     </Block>
   </HomeLayout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
