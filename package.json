@@ -8,7 +8,7 @@
     "@material-ui/styles": "^4.6.0",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "cloudhub-components": "^1.1.13",
+    "cloudhub-components": "",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.2.25",

@@ -12,12 +12,14 @@ import { Button, Block } from 'cloudhub-components';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
 import Highlight, { defaultProps } from 'prism-react-renderer';
-
 import { sizes, colors, fonts } from './src/theme';
+import CodeBlock from './src/components/CodeBlock';
 
 const SyntaxHighlighter = props => {
   const className = props.children.props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
+  // const { maxWidth } = useMetrics();
+
   return (
     <Highlight
       {...defaultProps}
@@ -43,49 +45,36 @@ const SyntaxHighlighter = props => {
   );
 };
 
-const LiveCode = props => {
-  const editorprops = {
-    ...defaultProps,
-  };
-
-  return (
-    <LiveProvider
-      code={props.children.props.children.trim()}
-      scope={{ Button }}
-      language="jsx"
-      {...props}
-    >
-      <LivePreview />
-      <LiveEditor {...editorprops} />
-      <LiveError />
-    </LiveProvider>
-  );
-};
-
 const components = {
   wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
-  pre: props => {
-    if (props.children.props['react-live']) {
-      return <LiveCode {...props} />;
-    }
-    return <SyntaxHighlighter {...props} />;
-  },
+  pre: props => (
+    <CodeBlock>
+      <SyntaxHighlighter {...props} />
+    </CodeBlock>
+  ),
   playground: props => {
     const editorprops = {
       ...defaultProps,
     };
-
     delete editorprops.Prism;
 
-
     return (
-      <Block flex={false} paper margin={[sizes.margin, 0]}>
+      <Block
+        flex={false}
+        paper
+        margin={[sizes.margin, 0]}
+        style={{ overflowX: 'auto', maxWidth: '100%' }}
+      >
         <LiveProvider
           code={props.children.trim()}
           language="jsx"
           scope={{ ...props.scope, colors, sizes, fonts }}
         >
-          <Block margin={[sizes.margin, 0]} padding={sizes.padding}>
+          <Block
+            margin={[sizes.margin, 0]}
+            padding={sizes.padding}
+            flex={false}
+          >
             <LivePreview />
           </Block>
           <Block>
@@ -98,4 +87,6 @@ const components = {
   },
 };
 
-export const wrapRootElement = ({ element }) => <MDXProvider components={components}>{element}</MDXProvider>;
+export const wrapRootElement = ({ element }) => (
+  <MDXProvider components={components}>{element}</MDXProvider>
+);

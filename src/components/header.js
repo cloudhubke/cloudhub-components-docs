@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { Block, Text, Button, IconButton, Container } from 'cloudhub-components';
+import {
+  Block,
+  Text,
+  Button,
+  IconButton,
+  Container,
+} from 'cloudhub-components';
 import { useMetrics } from 'cloudhub-components/dist/customhooks';
 import Menu from '@material-ui/icons/Menu';
 
@@ -9,7 +15,7 @@ import sizes from 'cloudhub-components/dist/theme/Sizes';
 import { colors, Images } from '../theme';
 
 const Header = React.forwardRef((props, ref) => {
-  const { isMobile } = useMetrics();
+  const { maxWidth } = useMetrics();
 
   return (
     <Block
@@ -24,13 +30,9 @@ const Header = React.forwardRef((props, ref) => {
       color={colors.mistyWhite}
       shadow
     >
-      <Container
-        flex={false}
-        maxWidth={isMobile ? 'sm' : 'lg'}
-        style={{ margin: 0, padding: 0 }}
-      >
-        <Block row wrap middle ref={ref}>
-          {!isMobile && (
+      <Container flex={false} style={{ margin: 0, padding: 0 }}>
+        <Block row={maxWidth === 'lg'} wrap middle ref={ref}>
+          {maxWidth === 'lg' && (
             <Link to="/" style={{ margin: 0, padding: 0 }}>
               <Block
                 flex={false}
@@ -40,7 +42,7 @@ const Header = React.forwardRef((props, ref) => {
               >
                 <img
                   src={Images.logo}
-                  alt="Clou Hub Limited"
+                  alt="Cloud Hub Limited"
                   style={{
                     height: sizes.navBarHeight - 15,
                   }}
@@ -62,16 +64,15 @@ const Header = React.forwardRef((props, ref) => {
             </Link>
           </Block>
 
-          {isMobile && (
-            <Block flex={false} middle>
-              <IconButton>
-                <Menu size={24} />
-              </IconButton>
-            </Block>
-          )}
-
-          <Block right={!isMobile}>
+          <Block right={!maxWidth === 'lg'}>
             <Block flex={false} row style={{ minWidth: 350 }}>
+              {maxWidth !== 'lg' && (
+                <Block flex={false} middle>
+                  <IconButton>
+                    <Menu size={24} />
+                  </IconButton>
+                </Block>
+              )}
               <Link to="/docs/getting-started">
                 <Button
                   // color="primary"

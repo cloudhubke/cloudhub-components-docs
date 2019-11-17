@@ -9,7 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import ThemeProvider from 'cloudhub-components/dist/theme/ThemeProvider';
-import { Block, Text, Container } from 'cloudhub-components';
+import { Block, Container } from 'cloudhub-components';
 import { useRect, useMetrics } from 'cloudhub-components/dist/customhooks';
 
 import { fonts, colors, sizes } from '../theme';
@@ -20,7 +20,8 @@ import Footer from './Footer';
 const Layout = ({ children }) => {
   const headerRef = React.useRef();
 
-  const { height } = useMetrics();
+  const { height, maxWidth } = useMetrics();
+
   const rect = useRect(headerRef);
 
   const headersize = rect || {};
@@ -40,7 +41,11 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider fonts={fonts} colors={colors} sizes={sizes}>
       <Block color={colors.gray4}>
-        <Header siteTitle={data.site.siteMetadata.title} ref={headerRef} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          maxWidth={maxWidth}
+          ref={headerRef}
+        />
         <Block
           flex={false}
           style={{

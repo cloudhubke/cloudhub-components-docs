@@ -57,3 +57,24 @@ import ImagesUpload  from 'cloudhub-components/dist/uploaders/ImagesUpload';
 ```js
 <Field label="Profile Picture" limit={1} name="ProfilePicture" component={ImagesUpload}/>
 ```
+
+
+## Whats expected from the server?
+
+```js
+
+    {
+    "fd": "/uploads/images/b0c49c28-9bc6-46f8-878f-f9f9b4928d3e.png",
+    "size": 23232,
+    "filename": "tvnlogo.png",
+    "status": "finished",
+    "field": "file",
+    "name": "tvnlogo.png",
+    "url": "/fileapi/uploads/images/b0c49c28-9bc6-46f8-878f-f9f9b4928d3e.png",
+    "Location": "/fileapi/uploads/images/b0c49c28-9bc6-46f8-878f-f9f9b4928d3e.png",
+    "uploaddate": 1573542177314,
+    "downloads": 0,
+    "uploaded": true
+    }
+
+````
