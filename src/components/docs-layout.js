@@ -57,7 +57,12 @@ const DocsLayout = props => {
             color={colors.gray3}
           >
             <ListMenu>
-              <ListSubMenu expanded header="Getting Started" headerIcon={null}>
+              <ListSubMenu
+                expanded
+                header="Getting Started"
+                headerIcon={null}
+                showHeaderIcon={false}
+              >
                 <Link to="/docs/getting-started/react">
                   <ListMenuItem>
                     <Text>React</Text>
@@ -85,7 +90,12 @@ const DocsLayout = props => {
                 </Link>
               </ListSubMenu>
 
-              <ListSubMenu expanded header="React Components" headerIcon={null}>
+              <ListSubMenu
+                expanded
+                header="React Components"
+                headerIcon={null}
+                showHeaderIcon={false}
+              >
                 {renderReactComponents()}
               </ListSubMenu>
             </ListMenu>
