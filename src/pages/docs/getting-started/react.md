@@ -9,17 +9,17 @@ sidebar_label: ReactJs
 
 import {Block, Button, Text } from 'cloudhub-components'
 
-React-Native components are designed to work with expo. If you are using any other eg react-native-cli to start your project, this may not work for you.
+cloudhub-components are designed to work in any reactjs project. 
 
 ## Installing
 
-In your expo project, run this command.
+In your project, run this command.
 
 ```sh
 npm install --save cloudhub-components
 ```
 
-Once expo is installed, make sure to create a theme folder [like the one in the project](https://github.com/cloudhubke/expo-components/tree/master/lib/theme). The required configuration parameters are `colors, fonts, sizes`.
+Once, installed, make sure to create a theme folder [like the one in the project](https://github.com/cloudhubke/cloudhub-components/tree/master/src/theme). The required configuration parameters are `colors, fonts, sizes`.
 
 Once done, configure pass theme to `ThemeProvider` context.
 
