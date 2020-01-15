@@ -41,7 +41,7 @@ import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selec
 ## Usage in a form
 
 ```js
- import CKEditor from 'cloudhub-components/dist/CKEditor';
+ import { StaticListSelector } | from 'cloudhub-components/dist/selectors';
     <Form
       onSubmit={() => {}}
       initialValues={{ }}
@@ -72,7 +72,6 @@ import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selec
 }
 </playground>
 
-
 ## Props
 <Block>
     <table>
@@ -81,13 +80,15 @@ import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selec
         </thead>
         <tbody>
             <tr><td>options</td><td>Options of the select</td><td>[]</td></tr>
+            <tr><td>keyExtractor</td><td>The unique attribute field</td><td>(row)=>row</td></tr>
             <tr><td>labelExtractor</td><td>Funtion to extract label</td><td>(row)=>row</td></tr>
             <tr><td>valueExtractor</td><td>Funtion to extract value to return</td><td>(row)=>row</td></tr>
+            <tr><td>filterKey</td><td>The key to query with.(?filter='') </td><td>filter</td></tr>
             <tr><td>onChange</td><td>Funtion to call when value changed</td><td>(row)=>valueExtractor(row)</td></tr>
             <tr><td>onSelectChange</td><td>Funtion to current selected row</td><td>(row)=>row</td></tr>
             <tr><td>isMulti</td><td>Whether to allow multiple selection</td><td>false</td></tr>
             <tr><td>url (for RemoteSelector)</td><td>url Endpoint for getting data</td><td>false</td></tr>
-             <tr><td>axiosinstance</td><td>Axios instance for fetching. Useful for including headers</td><td>axios.create()</td></tr>
+            <tr><td>axiosinstance</td><td>Axios instance for fetching. Useful for including headers</td><td>axios.create()</td></tr>
         </tbody>
     </table>
 </Block>

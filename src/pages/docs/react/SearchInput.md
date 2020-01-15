@@ -42,6 +42,9 @@ import {Block, SearchInput } from 'cloudhub-components';
             <tr><td>value</td><td>value</td><td></td></tr>
             <tr><td>onMenuClick</td><td>Called when menu icon is clicked</td><td></td></tr>
             <tr><td>onChange</td><td>Called when the input value is changed</td><td></td></tr>
+            <tr><td>onSubmit</td><td>Called when the righComponent is clicked</td><td></td></tr>
+            <tr><td>rightComponent</td><td>Button to display as right adornment</td><td></td></tr>
+            <tr><td>leftComponent</td><td>Button to display as left adornment (displays only on mobile view) </td><td></td></tr>
         </tbody>
     </table>
 </Block>

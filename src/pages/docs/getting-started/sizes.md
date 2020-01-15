@@ -16,7 +16,7 @@ Sizes Object is implemented to help pass common sizes as props to various compon
 
 <playground scope={{Block, Badge, Text, sizes, colors}}>
 {
-`<Block color={colors.successColor}>
+`<Block color={colors.successColor} row>
     <Badge size={64} color="accent">
         <Text h4 milkyWhite>55</Text>
     </Badge>

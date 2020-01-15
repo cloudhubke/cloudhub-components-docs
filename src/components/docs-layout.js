@@ -12,7 +12,7 @@ import { useMetrics } from 'cloudhub-components/dist/customhooks';
 import HomeLayout from './home-layout';
 import { colors } from '../theme';
 
-const DocsLayout = props => {
+const DocsLayout = ({ path, ...props }) => {
   const {
     allMdx: { nodes },
   } = useStaticQuery(graphql`
@@ -39,8 +39,8 @@ const DocsLayout = props => {
         return sidebar_label;
       });
     return files.map(file => (
-      <Link key={file} to={`/docs/react/${file}`}>
-        <ListMenuItem>
+      <Link key={file} to={`/docs/react/${file}/`}>
+        <ListMenuItem selected={`${path}`.includes(`react/${file}`)}>
           <Text>{file}</Text>
         </ListMenuItem>
       </Link>
@@ -64,27 +64,39 @@ const DocsLayout = props => {
                 showHeaderIcon={false}
               >
                 <Link to="/docs/getting-started/react">
-                  <ListMenuItem>
+                  <ListMenuItem
+                    selected={`${path}`.includes('getting-started/react')}
+                  >
                     <Text>React</Text>
                   </ListMenuItem>
                 </Link>
                 <Link to="/docs/getting-started/react-native">
-                  <ListMenuItem>
+                  <ListMenuItem
+                    selected={`${path}`.includes(
+                      'getting-started/react-native'
+                    )}
+                  >
                     <Text>React-Native</Text>
                   </ListMenuItem>
                 </Link>
                 <Link to="/docs/getting-started/colors">
-                  <ListMenuItem>
+                  <ListMenuItem
+                    selected={`${path}`.includes('getting-started/colors')}
+                  >
                     <Text>Colors Oject</Text>
                   </ListMenuItem>
                 </Link>
                 <Link to="/docs/getting-started/sizes">
-                  <ListMenuItem>
+                  <ListMenuItem
+                    selected={`${path}`.includes('getting-started/sizes')}
+                  >
                     <Text>Sizes Oject</Text>
                   </ListMenuItem>
                 </Link>
                 <Link to="/docs/getting-started/fonts">
-                  <ListMenuItem>
+                  <ListMenuItem
+                    selected={`${path}`.includes('getting-started/fonts')}
+                  >
                     <Text>Fonts Oject</Text>
                   </ListMenuItem>
                 </Link>

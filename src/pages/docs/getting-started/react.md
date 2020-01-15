@@ -52,3 +52,36 @@ import { Button } from "cloudhub-components"
   }
 </playground>
 
+
+## Import components from @material-ui
+
+```js
+  //import a component
+  import {Button} from 'cloudhub-components/dist/mui/core';
+  
+  //import styles
+  import {makeStyles, withStyles} from 'cloudhub-components/dist/mui/styles';
+
+  //import colors
+  import {red} from 'cloudhub-components/dist/mui/colors';
+
+  //import icons
+  import {Close} from 'cloudhub-components/dist/mui/icons';
+```
+
+
+## custom hooks
+
+```js
+  const debouncedvalue = useDebounce(changingvalue, 400);
+
+  //maxWidth is either sm, md, lg, xl
+  const {width, height, isMobile, maxWidth} = useMetrics();
+
+  //use Location after using <LocationProvider>
+  const {location, navigate} =  useLocation();
+
+  // similar to setInterval
+  useInterval(function, delay);
+
+```

@@ -8,15 +8,15 @@ sidebar_label: Colors Object
 
 
 import { Block,  Text } from 'cloudhub-components';
-import {colors} from '../../../theme';
+import {colors, sizes} from '../../../theme';
 
 Colors Object is implemented to help pass common colors as props to various components
 
 ### Example
 
-<playground scope={{Block,  Text,  colors}}>
+<playground scope={{Block,  Text,  colors, sizes}}>
 {
-`<Block paper color={colors.success}>
+`<Block paper color={colors.success} padding={sizes.padding}>
     <Text h3 white> White </Text>
 </Block>`
 }
