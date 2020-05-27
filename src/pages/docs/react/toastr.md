@@ -59,7 +59,7 @@ import {Block, toastr, ToastContainer } from 'cloudhub-components';
     }
     return (<Block row>
                 <Button contained onClick={openNormal}>
-                    Open Tastr
+                    Open Toastr
                 </Button>
                  <Button contained color="success" onClick={openSuccess} style={{marginLeft:10}}>
                     Success Toastr
