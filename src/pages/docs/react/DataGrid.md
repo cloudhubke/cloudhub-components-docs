@@ -6,11 +6,10 @@ sidebar_label: DataGrid
 
 ## DataGrid
 
-
-import {Block } from 'cloudhub-components';
-import SimpleDataGrid from 'cloudhub-components/dist/datagrid/SimpleDataGrid';
-import FullDataGrid from 'cloudhub-components/dist/datagrid/FullDataGrid';
-import RemoteDataGrid from 'cloudhub-components/dist/datagrid/RemoteDataGrid';
+import {Block } from '@cloudhub-ux/core';
+import SimpleDataGrid from '@cloudhub-ux/core/datagrid/SimpleDataGrid';
+import FullDataGrid from '@cloudhub-ux/core/datagrid/FullDataGrid';
+import RemoteDataGrid from '@cloudhub-ux/core/datagrid/RemoteDataGrid';
 import {sizes} from '../../../theme';
 
 DataGrid component is implemented from the DevExpress DataGrid
@@ -18,190 +17,49 @@ DataGrid component is implemented from the DevExpress DataGrid
 ## Usage
 
 ```js
-import SimpleDataGrid from 'cloudhub-components/dist/datagrid/SimpleDataGrid';
-import FullDataGrid from 'cloudhub-components/dist/datagrid/FullDataGrid';
-import RemoteDataGrid from 'cloudhub-components/dist/datagrid/RemoteDataGrid';
-import FullDataGridWithDetailView from 'cloudhub-components/dist/datagrid/FullDataGridWithDetailView';
-import RemoteDataGridWithDetailView from 'cloudhub-components/dist/datagrid/RemoteDataGridWithDetailView';
-
+import SimpleDataGrid from '@cloudhub-ux/core/datagrid/SimpleDataGrid';
+import FullDataGrid from '@cloudhub-ux/core/datagrid/FullDataGrid';
+import RemoteDataGrid from '@cloudhub-ux/core/datagrid/RemoteDataGrid';
+import FullDataGridWithDetailView from '@cloudhub-ux/core/datagrid/FullDataGridWithDetailView';
+import RemoteDataGridWithDetailView from '@cloudhub-ux/core/datagrid/RemoteDataGridWithDetailView';
 ```
+
 ### Simple Datagrid
 
 <playground scope={{Block, SimpleDataGrid}}>
 {
-`()=>{
-    const users = [
-         {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      }
-    },
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
-    }
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "address": {
-      "street": "Victor Plains",
-      "suite": "Suite 879",
-      "city": "Wisokyburgh",
-      "zipcode": "90566-7771",
-      "geo": {
-        "lat": "-43.9509",
-        "lng": "-34.4618"
-      }
-    },
-    "phone": "010-692-6593 x09125",
-    "website": "anastasia.net",
-    "company": {
-      "name": "Deckow-Crist",
-      "catchPhrase": "Proactive didactic contingency",
-      "bs": "synergize scalable supply-chains"
-    }
-  }
-    ];
-        const columns = [
-            {name: 'name'},
-            {name: 'username'},
-            {name: 'email'},
-        ]
-        return(<Block flex={false} style={{height: 400}}>
-                <SimpleDataGrid columns={columns} rows={users}/>
-        </Block>
-   )
-   }`
+`()=>{ const users = [ { "id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz", "address": { "street": "Kulas Light", "suite": "Apt. 556", "city": "Gwenborough", "zipcode": "92998-3874", "geo": { "lat": "-37.3159", "lng": "81.1496" } }, "phone": "1-770-736-8031 x56442", "website": "hildegard.org", "company": { "name": "Romaguera-Crona", "catchPhrase": "Multi-layered client-server neural-net", "bs": "harness real-time e-markets" } }, { "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", "address": { "street": "Victor Plains", "suite": "Suite 879", "city": "Wisokyburgh", "zipcode": "90566-7771", "geo": { "lat": "-43.9509", "lng": "-34.4618" } }, "phone": "010-692-6593 x09125", "website": "anastasia.net", "company": { "name": "Deckow-Crist", "catchPhrase": "Proactive didactic contingency", "bs": "synergize scalable supply-chains" } } ]; const columns = [ {name: 'name'}, {name: 'username'}, {name: 'email'}, ] return(<Block flex={false} style={{height: 400}}> <SimpleDataGrid columns={columns} rows={users}/> </Block> ) }`
 }
 </playground>
-
 
 ### Full Datagrid
 
 <playground scope={{Block, FullDataGrid}}>
 {
-`()=>{
-    const users = [
-         {
-    "id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      }
-    },
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
-    }
-  },
-  {
-    "id": 2,
-    "name": "Ervin Howell",
-    "username": "Antonette",
-    "email": "Shanna@melissa.tv",
-    "address": {
-      "street": "Victor Plains",
-      "suite": "Suite 879",
-      "city": "Wisokyburgh",
-      "zipcode": "90566-7771",
-      "geo": {
-        "lat": "-43.9509",
-        "lng": "-34.4618"
-      }
-    },
-    "phone": "010-692-6593 x09125",
-    "website": "anastasia.net",
-    "company": {
-      "name": "Deckow-Crist",
-      "catchPhrase": "Proactive didactic contingency",
-      "bs": "synergize scalable supply-chains"
-    }
-  }
-    ];
-        const columns = [
-            {name: 'name'},
-            {name: 'username'},
-            {name: 'email'},
-        ]
-        return(<Block flex={false} style={{height: 400}}>
-                <FullDataGrid columns={columns} rows={users}/>
-        </Block>
-   )
-   }`
+`()=>{ const users = [ { "id": 1, "name": "Leanne Graham", "username": "Bret", "email": "Sincere@april.biz", "address": { "street": "Kulas Light", "suite": "Apt. 556", "city": "Gwenborough", "zipcode": "92998-3874", "geo": { "lat": "-37.3159", "lng": "81.1496" } }, "phone": "1-770-736-8031 x56442", "website": "hildegard.org", "company": { "name": "Romaguera-Crona", "catchPhrase": "Multi-layered client-server neural-net", "bs": "harness real-time e-markets" } }, { "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", "address": { "street": "Victor Plains", "suite": "Suite 879", "city": "Wisokyburgh", "zipcode": "90566-7771", "geo": { "lat": "-43.9509", "lng": "-34.4618" } }, "phone": "010-692-6593 x09125", "website": "anastasia.net", "company": { "name": "Deckow-Crist", "catchPhrase": "Proactive didactic contingency", "bs": "synergize scalable supply-chains" } } ]; const columns = [ {name: 'name'}, {name: 'username'}, {name: 'email'}, ] return(<Block flex={false} style={{height: 400}}> <FullDataGrid columns={columns} rows={users}/> </Block> ) }`
 }
 </playground>
 
-##  RemoteDataGrid
+## RemoteDataGrid
 
 Used to fectch data remotely.
 
-#Usage 
+#Usage
 
 <playground scope={{RemoteDataGrid, Block}}>
-    {
-        `()=>{
-             const cols = [
-                {name: 'name', title: 'Full Name'},
-                {name: 'username'},
-                {name: 'email'},
-            ]
-             const columnWidths = [
-                {columnName: 'name', width: 120},
-                {columnName: 'username', width: 150},
-                {columnName: 'email', width: 150}
-            ];
-            return (
-                <Block flex={false} style={{height: 700, overflowY:'auto'}}>
-                    <RemoteDataGrid
-                        title="Users"
-                        url={'https://jsonplaceholder.typicode.com/users'}
-                        columns={cols}
-                        columnWidths={columnWidths}
-                        allowColumnResizing={false}
-                        onAdd={() => null}
-                        onDeleteRows={()=>null}
-                        onEdit={()=>{}}
-                    />  
-                </Block>
-            )
-        }
-      `
-    }
+{
+`()=>{ const cols = [ {name: 'name', title: 'Full Name'}, {name: 'username'}, {name: 'email'}, ] const columnWidths = [ {columnName: 'name', width: 120}, {columnName: 'username', width: 150}, {columnName: 'email', width: 150} ]; return ( <Block flex={false} style={{height: 700, overflowY:'auto'}}> <RemoteDataGrid title="Users" url={'https://jsonplaceholder.typicode.com/users'} columns={cols} columnWidths={columnWidths} allowColumnResizing={false} onAdd={() => null} onDeleteRows={()=>null} onEdit={()=>{}} /> </Block> ) }`
+}
 </playground>
 
 ## rowComponent
+
 ```js
-const rowComponent = ({ row, ...restProps }) => <Table.Row {...restProps} />
+const rowComponent = ({ row, ...restProps }) => <Table.Row {...restProps} />;
 ```
 
 ## cellComponent
+
 ```js
 const cellComponent = ({ row, column }) => (
   <TableCell>
@@ -232,7 +90,7 @@ const Header = ({ header, permissions, onSearch, queryString, ...props }) => {
           ...props,
           ...permissions,
           queryString,
-          onSearch
+          onSearch,
         })}
       </Block>
     );
@@ -251,7 +109,6 @@ const Header = ({ header, permissions, onSearch, queryString, ...props }) => {
   );
 };
 ```
-
 
 ## Props
 

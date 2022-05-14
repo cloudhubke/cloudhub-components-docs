@@ -8,7 +8,7 @@
 import React from 'react';
 
 import { MDXProvider } from '@mdx-js/react';
-import { Button, Block } from 'cloudhub-components';
+import { Button, Block } from '@cloudhub-ux/core';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
 import Highlight, { defaultProps } from 'prism-react-renderer';

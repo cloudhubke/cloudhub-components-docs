@@ -6,8 +6,7 @@ sidebar_label: DateRangePicker
 
 ## DateRangePicker
 
-
-import {Block, DateRangePicker } from 'cloudhub-components';
+import {Block, DateRangePicker } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 DateRangePicker used to select a range of date.
@@ -17,19 +16,16 @@ return an array of upper and lower date in timestamps.
 ## Usage
 
 ```js
-import {Block, DateRangePicker } from 'cloudhub-components';
+import { Block, DateRangePicker } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, DateRangePicker}}>
 {
-`<Block row>
-    <DateRangePicker />
-</Block>`
+`<Block row> <DateRangePicker /> </Block>`
 }
 </playground>
-
-
 
 ## Props
 

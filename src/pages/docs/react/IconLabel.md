@@ -6,9 +6,8 @@ sidebar_label: IconLabel
 
 ## IconLabel
 
-
-import {Block, IconLabel } from 'cloudhub-components';
-import Check from '@material-ui/icons/Check';
+import {Block, IconLabel } from '@cloudhub-ux/core';
+import Check from '@mui/icons-material/Check';
 import {sizes} from '../../../theme';
 
 Similar to [FieldLabel](./FieldLabel)
@@ -16,25 +15,18 @@ Similar to [FieldLabel](./FieldLabel)
 ## Usage
 
 ```js
-import {Block, IconLabel } from 'cloudhub-components';
+import { Block, IconLabel } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, IconLabel, Check}}>
 {
-`<Block row>
- <IconLabel icon={Check} color="success">
-    done
- </IconLabel>
-</Block>`
+`<Block row> <IconLabel icon={Check} color="success"> done </IconLabel> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

@@ -6,8 +6,7 @@ sidebar_label: ListSubMenu
 
 ## ListSubMenu
 
-
-import {Block, ListSubMenu, ListMenu, ListMenuItem } from 'cloudhub-components';
+import {Block, ListSubMenu, ListMenu, ListMenuItem } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 ListSubMenu component is implemented from the [Material-UI list](https://material-ui.com/components/buttons/).
@@ -15,38 +14,20 @@ ListSubMenu component is implemented from the [Material-UI list](https://materia
 ## Usage
 
 ```js
-import {Block, ListMenu, ListSubMenu, ListMenuItem } from 'cloudhub-components';
+import { Block, ListMenu, ListSubMenu, ListMenuItem } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, ListMenuItem, ListMenu, ListSubMenu}}>
 {
-`<Block row>
-    <Block flex={false} paper>
-        <ListMenu key="2-shopping" header="Shopping List">
-           <ListSubMenu key="c-groceries" header="Groceries" headerIcon={null}>
-                <ListMenuItem key="c-carrots">Carrots</ListMenuItem>
-                <ListMenuItem key="c-cabbages">Cabbages</ListMenuItem>
-                <ListMenuItem key="c-bananas">Bananas</ListMenuItem>
-           </ListSubMenu>
-            <ListSubMenu key="c-beverages" expanded header="Beverages" headerIcon={null}>
-                <ListMenuItem key="c-coke">Coke 500ml</ListMenuItem>
-                <ListMenuItem key="c-tea">Green Tea</ListMenuItem>
-           </ListSubMenu>
-        </ListMenu>
-    </Block>
-</Block>`
+`<Block row> <Block flex={false} paper> <ListMenu key="2-shopping" header="Shopping List"> <ListSubMenu key="c-groceries" header="Groceries" headerIcon={null}> <ListMenuItem key="c-carrots">Carrots</ListMenuItem> <ListMenuItem key="c-cabbages">Cabbages</ListMenuItem> <ListMenuItem key="c-bananas">Bananas</ListMenuItem> </ListSubMenu> <ListSubMenu key="c-beverages" expanded header="Beverages" headerIcon={null}> <ListMenuItem key="c-coke">Coke 500ml</ListMenuItem> <ListMenuItem key="c-tea">Green Tea</ListMenuItem> </ListSubMenu> </ListMenu> </Block> </Block>`
 }
 </playground>
-
-
-
-
 
 ## Props
 
 Material UI props and
-
 
 <Block>
     <table>

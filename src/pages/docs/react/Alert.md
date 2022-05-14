@@ -6,29 +6,24 @@ sidebar_label: Alert
 
 ## Alert
 
-import {Block, Text, Alert } from 'cloudhub-components';
+import {Block, Text, Alert } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
-
 
 Alert component is implemented from the Antd Alert component.
 
 ## Usage
 
 ```js
-import {Block, Alert } from 'cloudhub-components';
+import { Block, Alert } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, Text, Alert}}>
 {
-`<Block>
-    <Alert message={'Registration successfull'}/>
-    <Alert success message={'Registration successfull'}/>
-</Block>`
+`<Block> <Alert message={'Registration successfull'}/> <Alert success message={'Registration successfull'}/> </Block>`
 }
 </playground>
-
-
 
 ## Props
 

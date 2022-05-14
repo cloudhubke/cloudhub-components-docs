@@ -6,8 +6,7 @@ sidebar_label: Button
 
 ## Button
 
-
-import {Block, Button, Text } from 'cloudhub-components';
+import {Block, Button, Text } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Button component is implemented from the [Material-UI Buttos](https://material-ui.com/components/buttons/).
@@ -15,27 +14,14 @@ Button component is implemented from the [Material-UI Buttos](https://material-u
 ### Example
 
 <playground scope={{Block, Button, Text}}>
-  {
-  `<Block row>
-    <Button contained color={colors.primary}> 
-      <Text white>Click me</Text>
-    </Button> 
-     <Button rounded color={colors.success}> 
-      <Text white>Click me</Text>
-    </Button> 
-    <Button> 
-      <Text>Click me</Text>
-    </Button> 
-  </Block>`
-  }
+{
+`<Block row> <Button contained color={colors.primary}> <Text white>Click me</Text> </Button> <Button rounded color={colors.success}> <Text white>Click me</Text> </Button> <Button> <Text>Click me</Text> </Button> </Block>`
+}
 </playground>
-
-
 
 ## Props
 
 Material UI props and
-
 
 <Block>
     <table>
@@ -81,4 +67,4 @@ Material UI props and
     </table>
 </Block>
 
-Other props: outlined, 
+Other props: outlined,

@@ -6,9 +6,8 @@ sidebar_label: Popper
 
 ## Popper
 
-
-import {Block, Text, Button } from 'cloudhub-components';
-import {Popper} from 'cloudhub-components/dist/dialog'
+import {Block, Text, Button } from '@cloudhub-ux/core';
+import {Popper} from '@cloudhub-ux/core/dialog'
 import {sizes} from '../../../theme';
 
 Popper component is implemented from the [Material-UI Popper](https://material-ui.com/components/popper/).
@@ -16,31 +15,18 @@ Popper component is implemented from the [Material-UI Popper](https://material-u
 ## Usage
 
 ```js
-import {Popper} from 'cloudhub-components/dist/dialog'
+import { Popper } from '@cloudhub-ux/core/dialog';
 ```
+
 ### Example
 
 <playground scope={{Block, Button, Text, Popper}}>
 {
-`()=>{
-    const [open, setOpen]=React.useState(false);
-    const handleOpen=()=>{
-        setOpen(!open);
-    }
-    return (<Block row right>
-        <Popper open={open} onClose={()=>setOpen(false)} anchorComponent={<Button contained onClick={()=>setOpen(true)}>Open Cart</Button>}>
-            <Text h4>There are no cart items </Text>
-        </Popper>
-    </Block>)
-}`
+`()=>{ const [open, setOpen]=React.useState(false); const handleOpen=()=>{ setOpen(!open); } return (<Block row right> <Popper open={open} onClose={()=>setOpen(false)} anchorComponent={<Button contained onClick={()=>setOpen(true)}>Open Cart</Button>}> <Text h4>There are no cart items </Text> </Popper> </Block>) }`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

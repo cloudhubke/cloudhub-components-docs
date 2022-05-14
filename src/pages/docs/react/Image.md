@@ -6,8 +6,7 @@ sidebar_label: Image
 
 ## Image
 
-
-import {Block, Image } from 'cloudhub-components';
+import {Block, Image } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Image component is implemented from the [Material-UI Images](https://material-ui.com/components/buttons/).
@@ -15,23 +14,23 @@ Image component is implemented from the [Material-UI Images](https://material-ui
 ## Usage
 
 ```js
-import {Block, Image } from 'cloudhub-components';
+import { Block, Image } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, Image }}>
 {
 `<Block row wrap>
-    <Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" xs/>
-     <Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" sm/>
-      <Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" md />
-        <Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" lg rounded />
-     <Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" />
+<Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" xs/>
+<Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" sm/>
+<Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" md />
+<Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" lg rounded />
+<Image image="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80" />
 
 </Block>`
 }
 </playground>
-
 
 ## Props
 

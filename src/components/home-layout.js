@@ -8,9 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import ThemeProvider from 'cloudhub-components/dist/theme/ThemeProvider';
-import { Block, Container } from 'cloudhub-components';
-import { useRect, useMetrics } from 'cloudhub-components/dist/customhooks';
+import { Block, Container } from '@cloudhub-ux/core';
+import { useRect, useMetrics } from '@cloudhub-ux/core/customhooks';
 
 import { fonts, colors, sizes } from '../theme';
 import Header from './Header';
@@ -39,39 +38,36 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <ThemeProvider fonts={fonts} colors={colors} sizes={sizes}>
-      <Block color={colors.gray4}>
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          maxWidth={maxWidth}
-          ref={headerRef}
-        />
-        <Block
-          flex={false}
+    <Block color={colors.gray4}>
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        maxWidth={maxWidth}
+        ref={headerRef}
+      />
+      <Block
+        flex={false}
+        style={{
+          marginTop: headerheight || sizes.navBarHeight,
+          minHeight: `calc(${height - (headerheight || sizes.navBarHeight)}px)`,
+        }}
+      >
+        <Container
+          column
+          color={colors.milkyWhite}
+          padding={0}
           style={{
-            marginTop: headerheight || sizes.navBarHeight,
-            minHeight: `calc(${height
-              - (headerheight || sizes.navBarHeight)}px)`,
+            flex: 1,
+            paddingLeft: 0,
+            paddingRight: 0,
           }}
         >
-          <Container
-            column
-            color={colors.milkyWhite}
-            padding={0}
-            style={{
-              flex: 1,
-              paddingLeft: 0,
-              paddingRight: 0,
-            }}
-          >
-            <Block style={{ width: '100%' }}>{children}</Block>
-          </Container>
-        </Block>
-        <Block flex={false}>
-          <Footer />
-        </Block>
+          <Block style={{ width: '100%' }}>{children}</Block>
+        </Container>
       </Block>
-    </ThemeProvider>
+      <Block flex={false}>
+        <Footer />
+      </Block>
+    </Block>
   );
 };
 

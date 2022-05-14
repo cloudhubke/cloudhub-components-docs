@@ -6,8 +6,7 @@ sidebar_label: SearchInput
 
 ## SearchInput
 
-
-import {Block, SearchInput } from 'cloudhub-components';
+import {Block, SearchInput } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 SearchInput component is implemented from the [Material-UI TextArea](https://material-ui.com/components/textarea).
@@ -15,23 +14,18 @@ SearchInput component is implemented from the [Material-UI TextArea](https://mat
 ## Usage
 
 ```js
-import {Block, SearchInput } from 'cloudhub-components';
+import { Block, SearchInput } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, SearchInput}}>
 {
-`<Block row>
-    <SearchInput />
-</Block>`
+`<Block row> <SearchInput /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

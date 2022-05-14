@@ -6,8 +6,7 @@ sidebar_label: TimeDurationsPicker
 
 ## TimeDurationsPicker
 
-
-import {Block, TimeDurationsPicker } from 'cloudhub-components';
+import {Block, TimeDurationsPicker } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 TimeDurationsPicker component for selecting an array of time durations
@@ -15,19 +14,16 @@ TimeDurationsPicker component for selecting an array of time durations
 ## Usage
 
 ```js
-import {Block, TimeDurationsPicker } from 'cloudhub-components';
+import { Block, TimeDurationsPicker } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, TimeDurationsPicker}}>
 {
-`<Block row>
-    <TimeDurationsPicker />
-</Block>`
+`<Block row> <TimeDurationsPicker /> </Block>`
 }
 </playground>
-
-
 
 ## Props
 

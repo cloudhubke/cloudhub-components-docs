@@ -6,8 +6,7 @@ sidebar_label: ListMenu
 
 ## ListMenu
 
-
-import { Block, ListMenu, ListSubMenu, ListMenuItem } from 'cloudhub-components';
+import { Block, ListMenu, ListSubMenu, ListMenuItem } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 ListMenu component is implemented from the [Material-UI List](https://material-ui.com/components/list/).
@@ -15,53 +14,28 @@ ListMenu component is implemented from the [Material-UI List](https://material-u
 ## Usage
 
 ```js
-import { ListMenu, ListSubMenu, ListMenuItem } from 'cloudhub-components';
+import { ListMenu, ListSubMenu, ListMenuItem } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, ListMenuItem, ListMenu}}>
 {
-`<Block row>
-    <Block flex={false} paper>
-        <ListMenu key="1-shopping"  header="Groceries">
-            <ListMenuItem key="carrots">Carrots</ListMenuItem>
-            <ListMenuItem key="cabbages">Cabbages</ListMenuItem>
-            <ListMenuItem key="bananas">Bananas</ListMenuItem>
-        </ListMenu>
-    </Block>
-</Block>`
+`<Block row> <Block flex={false} paper> <ListMenu key="1-shopping" header="Groceries"> <ListMenuItem key="carrots">Carrots</ListMenuItem> <ListMenuItem key="cabbages">Cabbages</ListMenuItem> <ListMenuItem key="bananas">Bananas</ListMenuItem> </ListMenu> </Block> </Block>`
 }
 </playground>
-
 
 ### Collapsible Sub Headers
 
 <playground scope={{Block, ListMenuItem, ListMenu, ListSubMenu}}>
 {
-`<Block row>
-    <Block flex={false} paper>
-        <ListMenu key="2-shopping" header="Shopping List">
-           <ListSubMenu key="c-groceries" header="Groceries" headerIcon={null}>
-                <ListMenuItem key="c-carrots">Carrots</ListMenuItem>
-                <ListMenuItem key="c-cabbages">Cabbages</ListMenuItem>
-                <ListMenuItem key="c-bananas">Bananas</ListMenuItem>
-           </ListSubMenu>
-            <ListSubMenu key="c-beverages" expanded header="Beverages" headerIcon={null}>
-                <ListMenuItem key="c-coke">Coke 500ml</ListMenuItem>
-                <ListMenuItem key="c-tea">Green Tea</ListMenuItem>
-           </ListSubMenu>
-        </ListMenu>
-    </Block>
-</Block>`
+`<Block row> <Block flex={false} paper> <ListMenu key="2-shopping" header="Shopping List"> <ListSubMenu key="c-groceries" header="Groceries" headerIcon={null}> <ListMenuItem key="c-carrots">Carrots</ListMenuItem> <ListMenuItem key="c-cabbages">Cabbages</ListMenuItem> <ListMenuItem key="c-bananas">Bananas</ListMenuItem> </ListSubMenu> <ListSubMenu key="c-beverages" expanded header="Beverages" headerIcon={null}> <ListMenuItem key="c-coke">Coke 500ml</ListMenuItem> <ListMenuItem key="c-tea">Green Tea</ListMenuItem> </ListSubMenu> </ListMenu> </Block> </Block>`
 }
 </playground>
-
-
 
 ## Props
 
 Material UI props and
-
 
 <Block>
     <table>

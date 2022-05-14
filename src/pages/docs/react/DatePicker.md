@@ -6,8 +6,7 @@ sidebar_label: DatePicker
 
 ## DatePicker
 
-
-import {Block, DatePicker } from 'cloudhub-components';
+import {Block, DatePicker } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 DatePicker component used to select a date in timestamp format.
@@ -15,23 +14,18 @@ DatePicker component used to select a date in timestamp format.
 ## Usage
 
 ```js
-import {Block, DatePicker } from 'cloudhub-components';
+import { Block, DatePicker } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, DatePicker}}>
 {
-`<Block row>
-   <DatePicker />
-</Block>`
+`<Block row> <DatePicker /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

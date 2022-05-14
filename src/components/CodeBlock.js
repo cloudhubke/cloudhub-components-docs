@@ -1,6 +1,6 @@
 import React from 'react';
-import { Block } from 'cloudhub-components';
-import { useMetrics } from 'cloudhub-components/dist/customhooks';
+import { Block } from '@cloudhub-ux/core';
+import { useMetrics } from '@cloudhub-ux/core/customhooks';
 import { sizes } from '../theme';
 
 const CodeBlock = ({ children }) => {

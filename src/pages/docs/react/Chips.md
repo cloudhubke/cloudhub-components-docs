@@ -6,8 +6,7 @@ sidebar_label: Chips
 
 ## Chips
 
-
-import {Block, Chips } from 'cloudhub-components';
+import {Block, Chips } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Chips component is implemented from the [Material-UI Chips](https://material-ui.com/components/chips).
@@ -15,23 +14,18 @@ Chips component is implemented from the [Material-UI Chips](https://material-ui.
 ## Usage
 
 ```js
-import {Block, Chips } from 'cloudhub-components';  
+import { Block, Chips } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, Chips}}>
 {
-`<Block row>
-    <Chips data={[{name:  'John', value: 50}, {name:  'James', value: 24}, {name:  'Angela', value: 30}]} extractLabel={n=>n.name} extractKey={n=>n.name} />
-</Block>`
+`<Block row> <Chips data={[{name: 'John', value: 50}, {name: 'James', value: 24}, {name: 'Angela', value: 30}]} extractLabel={n=>n.name} extractKey={n=>n.name} /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

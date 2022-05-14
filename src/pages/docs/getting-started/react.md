@@ -7,68 +7,61 @@ sidebar_label: ReactJs
 <!-- prettier-ignore -->
 ## ReactJs
 
-import {Block, Button, Text } from 'cloudhub-components'
+import {Block, Button, Text } from '@cloudhub-ux/core'
 
-cloudhub-components are designed to work in any reactjs project. 
+@cloudhub-ux/core are designed to work in any reactjs project.
 
 ## Installing
 
 In your project, run this command.
 
 ```sh
-npm install --save cloudhub-components
+npm install --save @cloudhub-ux/core
 ```
 
-Once, installed, make sure to create a theme folder [like the one in the project](https://github.com/cloudhubke/cloudhub-components/tree/master/src/theme). The required configuration parameters are `colors, fonts, sizes`.
+Once, installed, make sure to create a theme folder [like the one in the project](https://github.com/cloudhubke/@cloudhub-ux/core/tree/master/src/theme). The required configuration parameters are `colors, fonts, sizes`.
 
 Once done, configure pass theme to `ThemeProvider` context.
 
 ```js
-import { sizes, fonts, colors } from "./theme";
-import ThemeProvider from "cloudhub-components/dist/theme/ThemeProvider";
+import { sizes, fonts, colors } from './theme';
+import ThemeProvider from '@cloudhub-ux/core/theme/ThemeProvider';
 
 <ThemeProvider fonts={fonts} sizes={sizes} colors={colors}>
   <App />
-</ThemeProvider>
+</ThemeProvider>;
 ```
 
 Your project is now ready to use with your theme and [Materia Ui Theme](https://material-ui.com/customization/theming/).
 
 ```js
-import { sizes, fonts, colors } from "./theme"
-import { Button } from "cloudhub-components"
+import { sizes, fonts, colors } from './theme';
+import { Button } from '@cloudhub-ux/core';
 ```
-
 
 ### Example
 
 <playground scope={{Block, Button, Text}}>
-  {
-  `<Block row>
-    <Button contained color={colors.primary}> 
-      <Text white>Click me</Text>
-    </Button> 
-  </Block>`
-  }
+{
+`<Block row> <Button contained color={colors.primary}> <Text white>Click me</Text> </Button> </Block>`
+}
 </playground>
-
 
 ## Import components from @material-ui
 
 ```js
-  //import a component
-  import {Button} from 'cloudhub-components/dist/mui/core';
-  
-  //import styles
-  import {makeStyles, withStyles} from 'cloudhub-components/dist/mui/styles';
+//import a component
+import { Button } from '@cloudhub-ux/core/mui/core';
 
-  //import colors
-  import {red} from 'cloudhub-components/dist/mui/colors';
+//import styles
+import { makeStyles, withStyles } from '@cloudhub-ux/core/mui/styles';
 
-  //import icons
-  import {Close} from 'cloudhub-components/dist/mui/icons';
+//import colors
+import { red } from '@cloudhub-ux/core/mui/colors';
+
+//import icons
+import { Close } from '@cloudhub-ux/core/mui/icons';
 ```
-
 
 ## custom hooks
 

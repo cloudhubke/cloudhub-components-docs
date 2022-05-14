@@ -6,8 +6,7 @@ sidebar_label: Colors Object
 
 ## Colors Object
 
-
-import { Block,  Text } from 'cloudhub-components';
+import { Block, Text } from '@cloudhub-ux/core';
 import {colors, sizes} from '../../../theme';
 
 Colors Object is implemented to help pass common colors as props to various components
@@ -16,9 +15,7 @@ Colors Object is implemented to help pass common colors as props to various comp
 
 <playground scope={{Block,  Text,  colors, sizes}}>
 {
-`<Block paper color={colors.success} padding={sizes.padding}>
-    <Text h3 white> White </Text>
-</Block>`
+`<Block paper color={colors.success} padding={sizes.padding}> <Text h3 white> White </Text> </Block>`
 }
 </playground>
 
@@ -43,7 +40,7 @@ import {
   brown,
   grey,
   blueGrey,
-} from '@material-ui/core/colors';
+} from '@mui/material/colors';
 
 const colors = {
   primary: '#37b38b', // '#0976b4',
@@ -64,25 +61,25 @@ const colors = {
   mistyWhite: '#FFF6FF',
   milkyWhite: '#FFFCFF',
 
-  red: red[500],
-  pink: pink[500],
-  purple: purple[500],
-  deepPurple: deepPurple[500],
-  indigo: indigo[500],
-  blue: blue[500],
-  lightBlue: lightBlue[500],
-  cyan: cyan[500],
-  teal: teal[500],
-  green: green[500],
-  lightGreen: lightGreen[500],
-  lime: lime[500],
-  yellow: yellow[500],
-  amber: amber[500],
-  orange: orange[500],
-  deepOrange: deepOrange[500],
-  brown: brown[500],
-  grey: grey[500],
-  blueGrey: blueGrey[500],
+  red,
+  pink,
+  purple,
+  deepPurple,
+  indigo,
+  blue,
+  lightBlue,
+  cyan,
+  teal,
+  green,
+  lightGreen,
+  lime,
+  yellow,
+  amber,
+  orange,
+  deepOrange,
+  brown,
+  grey,
+  blueGrey,
 
   background: '#1F0808',
   clear: 'rgba(0,0,0,0)',
@@ -109,85 +106,26 @@ const colors = {
   banner: '#5F3E63',
   text: '#E0D7E5',
 
-  primaryColor: [
-    '#9c27b0',
-    '#ab47bc',
-    '#8e24aa',
-    '#af2cc5',
-    '#e1bee7',
-    '#ba68c8',
-  ],
-  secondaryColor: ['#fafafa'],
-  warningColor: [
-    '#ff9800',
-    '#ffa726',
-    '#fb8c00',
-    '#ffa21a',
-    '#fcf8e3',
-    '#faf2cc',
-    '#ffe0b2',
-    '#ffb74d',
-  ],
-  dangerColor: [
-    '#f44336',
-    '#ef5350',
-    '#e53935',
-    '#f55a4e',
-    '#f2dede',
-    '#ebcccc',
-    'ef9a9a',
-    '#ef5350',
-  ],
-  successColor: [
-    '#4caf50',
-    '#66bb6a',
-    '#43a047',
-    '#5cb860',
-    '#dff0d8',
-    '#d0e9c6',
-    '#a5d6a7',
-    '#66bb6a',
-  ],
-  infoColor: [
-    '#00acc1',
-    '#26c6da',
-    '#00acc1',
-    '#00d3ee',
-    '#d9edf7',
-    '#c4e3f3',
-    '#b2ebf2',
-    '#4dd0e1',
-  ],
+  primaryColors: {
+    lighter: '#FFE3D5',
+    light: '#FFC1AC',
+    main: '#FC4C69',
+    dark: '#FF3030',
+    darker: '#B71833',
+  },
+  secondaryColors: {
+    lighter: '#FFF59D',
+    light: '#FFF59D',
+    main: '#DCE775',
+    dark: '#8BC34A',
+    darker: '#388E3C',
+  },
+  tertiaryColors: {},
+  warningColors: {},
+  dangerColors: {},
+  successColors: {},
+  infoColors: {},
 
-  roseColor: ['#e91e63', '#ec407a', '#d81b60', '#f8bbd0', '#f06292'],
-  grayColor: [
-    '#999',
-    '#3C4858',
-    '#eee',
-    '#343434',
-    '#585858',
-    '#232323',
-    '#ddd',
-    '#6c757d',
-    '#333',
-    '#212121',
-    '#777',
-    '#D2D2D2',
-    '#AAA',
-    '#495057',
-    '#e5e5e5',
-    '#555',
-    '#f9f9f9',
-    '#ccc',
-    '#444',
-    '#f2f2f2',
-    '#89229b',
-    '#c0c1c2',
-    '#9a9a9a',
-    '#f5f5f5',
-    '#505050',
-    '#1f1f1f',
-  ],
   whiteColor: '#FFF',
   blackColor: '#000',
   twitterColor: '#55acee',
@@ -220,5 +158,4 @@ const colors = {
 };
 
 export default colors;
-
 ```

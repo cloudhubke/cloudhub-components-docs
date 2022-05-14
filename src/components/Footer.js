@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Text, Block } from "cloudhub-components"
-import { colors, sizes } from "../theme"
+import React from 'react';
+import { Link } from 'gatsby';
+import { Text, Block } from '@cloudhub-ux/core';
+import { colors, sizes } from '../theme';
 
 const Footer = props => (
   <Block color={colors.dark} flex={false} padding={sizes.padding} center>
@@ -63,11 +63,11 @@ const Footer = props => (
     <Block flex={false} margin={[sizes.margin, 0]}>
       <a href="https://www.cloudhub.co.ke" rel="noopener noreferrer">
         <Text h5 tertiary>
-          ©{new Date().getFullYear()},{" Cloud Hub Limited "}
+          ©{new Date().getFullYear()},{' Cloud Hub Limited '}
         </Text>
       </a>
     </Block>
   </Block>
-)
+);
 
-export default Footer
+export default Footer;

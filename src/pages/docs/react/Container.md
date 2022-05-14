@@ -6,8 +6,7 @@ sidebar_label: Container
 
 ## Container
 
-
-import {Block, Container } from 'cloudhub-components';
+import {Block, Container } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Container component is implemented from the [Material-UI Container](https://material-ui.com/components/container).
@@ -15,13 +14,10 @@ Container component is implemented from the [Material-UI Container](https://mate
 ## Usage
 
 ```js
- import {Container } from 'cloudhub-components';
+import { Container } from '@cloudhub-ux/core';
 ```
 
-
 ## Props
-
-
 
 <Block>
     <table>

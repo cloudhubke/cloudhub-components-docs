@@ -6,8 +6,7 @@ sidebar_label: TextArea
 
 ## TextArea
 
-
-import {Block, TextArea } from 'cloudhub-components';
+import {Block, TextArea } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 TextArea component is implemented from the [Material-UI TextAreas](https://material-ui.com/components/buttons/).
@@ -15,23 +14,17 @@ TextArea component is implemented from the [Material-UI TextAreas](https://mater
 ## Usage
 
 ```js
-
 ```
+
 ### Example
 
 <playground scope={{Block, TextArea}}>
 {
-`<Block row>
-    <TextArea value="Hakuna Matata" />
-</Block>`
+`<Block row> <TextArea value="Hakuna Matata" /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

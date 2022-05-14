@@ -6,11 +6,9 @@ sidebar_label: Text
 
 ## Text
 
-
-import { Block, Text } from 'cloudhub-components';
+import { Block, Text } from '@cloudhub-ux/core';
 
 import {sizes, colors} from '../../../theme';
-
 
 Text component is implemented from a span component. The implementation is similar to Material ui's `<Typography />` component.
 
@@ -19,49 +17,40 @@ Text component is implemented from a span component. The implementation is simil
 <playground scope={{Block, Text}}>
 {
 `<Block>
-  <Text h1>The big brown fox jumped over the lazy dog. </Text>
-  <Text h2>The big brown fox jumped over the lazy dog. </Text>
-  <Text h3>The big brown fox jumped over the lazy dog. </Text>
-  <Text h4>The big brown fox jumped over the lazy dog. </Text>
-  <Text h5>The big brown fox jumped over the lazy dog. </Text>
-  <Text h6>The big brown fox jumped over the lazy dog. </Text>
-  <br />
-  <Text header>The big brown fox jumped over the lazy dog. </Text>
-  <Text subHeader>The big brown fox jumped over the lazy dog. </Text>
-  <Text title>The big brown fox jumped over the lazy dog. </Text>
-  <Text subTitle>The big brown fox jumped over the lazy dog. </Text>
+<Text h1>The big brown fox jumped over the lazy dog. </Text>
+<Text h2>The big brown fox jumped over the lazy dog. </Text>
+<Text h3>The big brown fox jumped over the lazy dog. </Text>
+<Text h4>The big brown fox jumped over the lazy dog. </Text>
+<Text h5>The big brown fox jumped over the lazy dog. </Text>
+<Text h6>The big brown fox jumped over the lazy dog. </Text>
+<br />
+<Text header>The big brown fox jumped over the lazy dog. </Text>
+<Text subHeader>The big brown fox jumped over the lazy dog. </Text>
+<Text title>The big brown fox jumped over the lazy dog. </Text>
+<Text subTitle>The big brown fox jumped over the lazy dog. </Text>
 
   <br />
 
-
-  <Text h4 italic>The big brown fox jumped over the lazy dog. </Text>
-  <Text bold>The big brown fox jumped over the lazy dog. </Text>
-  <Text header bold>The big brown fox jumped over the lazy dog. </Text>
+<Text h4 italic>The big brown fox jumped over the lazy dog. </Text>
+<Text bold>The big brown fox jumped over the lazy dog. </Text>
+<Text header bold>The big brown fox jumped over the lazy dog. </Text>
 
   <br />
   <Text h3 strikethrough>The big brown fox jumped over the lazy dog. </Text>
 
-  <Text h4 underline>The big brown fox jumped over the lazy dog. </Text>
-
-
+<Text h4 underline>The big brown fox jumped over the lazy dog. </Text>
 
   <br />
   <Text h4 accent>The big brown fox jumped over the lazy dog. </Text>
   <Text small dark>The big brown fox jumped over the lazy dog. </Text>
 
-
-
 </Block>`
 }
 </playground>
 
-
-
-
 ## Props
 
 Material UI props and
-
 
 <Block>
   <table>
@@ -98,7 +87,7 @@ Material UI props and
 
 ## Colors you can pass as props
 
-You can pass the following props. 
+You can pass the following props.
 <Block row wrap color={colors.gray}>
 <Text accent>accent</Text>
 <Text primary>primary</Text>

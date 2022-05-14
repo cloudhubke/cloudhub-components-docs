@@ -6,8 +6,7 @@ sidebar_label: Input
 
 ## Input
 
-
-import {Block, Form, Field, Input } from 'cloudhub-components';
+import {Block, Form, Field, Input } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Input component is implemented from the [Material-UI Inputs](https://material-ui.com/components/buttons/).
@@ -15,40 +14,24 @@ Input component is implemented from the [Material-UI Inputs](https://material-ui
 ## Usage
 
 ```js
-import {Block, Input } from 'cloudhub-components';
+import { Block, Input } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, Form, Field, Input}}>
 {
-`<Block row>
-    <Form
-      onSubmit={() => {}}
-      initialValues={{ FirstName: "Angela" }}
-      render={() => {
-        return (
-          <Field
-            label="First Name"
-            type="text"
-            name="FirstName"
-            component={Input}
-          />
-        );
-      }}
-    />
-</Block>`
+`<Block row> <Form onSubmit={() => {}} initialValues={{ FirstName: "Angela" }} render={() => { return ( <Field label="First Name" type="text" name="FirstName" component={Input} /> ); }} /> </Block>`
 }
 </playground>
-
 
 ## Outside a form
 
 ```js
-    <Input onChange={handleChange} />
+<Input onChange={handleChange} />
 ```
+
 ## Props
-
-
 
 <Block>
     <table>

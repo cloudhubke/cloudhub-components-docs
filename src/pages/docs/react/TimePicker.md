@@ -6,8 +6,7 @@ sidebar_label: TimePicker
 
 ## TimePicker
 
-
-import {Block, TimePicker } from 'cloudhub-components';
+import {Block, TimePicker } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 TimePicker component for selecting time implemented from antd
@@ -15,23 +14,18 @@ TimePicker component for selecting time implemented from antd
 ## Usage
 
 ```js
-import {Block, TimePicker } from 'cloudhub-components';
+import { Block, TimePicker } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, TimePicker}}>
 {
-`<Block row>
-    <TimePicker />
-</Block>`
+`<Block row> <TimePicker /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

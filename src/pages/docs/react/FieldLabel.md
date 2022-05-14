@@ -6,35 +6,27 @@ sidebar_label: FieldLabel
 
 ## FieldLabel
 
-
-import {Block, FieldLabel } from 'cloudhub-components';
-import Close from '@material-ui/icons/Close';
+import {Block, FieldLabel } from '@cloudhub-ux/core';
+import Close from '@mui/icons-material/Close';
 import {sizes} from '../../../theme';
 
-FieldLabel component is used inside a form  but just as a label
+FieldLabel component is used inside a form but just as a label
 
 ## Usage
 
 ```js
-import { Block, FieldLabel } from 'cloudhub-components';
+import { Block, FieldLabel } from '@cloudhub-ux/core';
 ```
+
 ### Example
-
-
 
 <playground scope={{Block, FieldLabel, Close}}>
 {
-`<Block row>
-    <FieldLabel icon={Close} label="Pending Activation" />
-</Block>`
+`<Block row> <FieldLabel icon={Close} label="Pending Activation" /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

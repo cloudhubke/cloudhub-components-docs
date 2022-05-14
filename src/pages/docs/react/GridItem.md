@@ -6,8 +6,7 @@ sidebar_label: GridItem
 
 ## GridItem
 
-
-import {Block, GridContainer, GridItem } from 'cloudhub-components';
+import {Block, GridContainer, GridItem } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 GridItem component is implemented from the [Material-UI Grid](https://material-ui.com/components/grid).
@@ -15,21 +14,16 @@ GridItem component is implemented from the [Material-UI Grid](https://material-u
 ## Usage
 
 ```js
-import {Block, GridContainer, GridItem } from 'cloudhub-components';
+import { Block, GridContainer, GridItem } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, GridContainer, GridItem}}>
 {
-`<Block row>
-  <GridContainer>
-    <GridItem />
-  </GridContainer>
-</Block>`
+`<Block row> <GridContainer> <GridItem /> </GridContainer> </Block>`
 }
 </playground>
-
-
 
 ## Props
 

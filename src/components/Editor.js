@@ -1,11 +1,11 @@
 import React from 'react';
-import { Block } from 'cloudhub-components';
+import { Block } from '@cloudhub-ux/core';
 
 const Editor = props => {
   const [] = React.useState(0);
 
   if (global.navigator) {
-    const CKEditor = require('cloudhub-components/dist/CKEditor');
+    const CKEditor = require('@cloudhub-ux/core/CKEditor');
     return <CKEditor />;
   }
   return null;

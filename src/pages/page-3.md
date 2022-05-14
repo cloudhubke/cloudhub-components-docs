@@ -6,7 +6,7 @@ intro: Button API
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 
-import { Button } from 'cloudhub-components';
+import { Button } from '@cloudhub-ux/core';
 
 # Button
 

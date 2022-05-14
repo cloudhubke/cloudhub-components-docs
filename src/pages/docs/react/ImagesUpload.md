@@ -10,12 +10,12 @@ This component is used to upload images to the server or cloud.
 
 Its a custom component powered by antd [Upload component](https://ant.design/components/upload/)
 
-import ImagesUpload from 'cloudhub-components/dist/uploaders/ImagesUpload';
+import ImagesUpload from '@cloudhub-ux/core/uploaders/ImagesUpload';
 
 ## Usage
 
 ```js
-import ImagesUpload  from 'cloudhub-components/dist/uploaders/ImagesUpload';
+import ImagesUpload from '@cloudhub-ux/core/uploaders/ImagesUpload';
 ```
 
 <playground scope={{ImagesUpload}}>
@@ -50,14 +50,16 @@ import ImagesUpload  from 'cloudhub-components/dist/uploaders/ImagesUpload';
   </table>
 </Block>
 
-
-
 ## Usage in a from Field
 
 ```js
-<Field label="Profile Picture" limit={1} name="ProfilePicture" component={ImagesUpload}/>
+<Field
+  label="Profile Picture"
+  limit={1}
+  name="ProfilePicture"
+  component={ImagesUpload}
+/>
 ```
-
 
 ## Whats expected from the server?
 
@@ -77,4 +79,4 @@ import ImagesUpload  from 'cloudhub-components/dist/uploaders/ImagesUpload';
     "uploaded": true
     }
 
-````
+```

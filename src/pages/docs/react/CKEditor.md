@@ -6,48 +6,40 @@ sidebar_label: CKEditor
 
 ## CKEditor
 
-
-import {Block, Field, Form } from 'cloudhub-components';
+import {Block, Field, Form } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
-
-CKEditor component is implemented from the [CKEditor] (https://ckeditor.com/docs/ckeditor5).
+CKEditor component is implemented from the [CKEditor](https://ckeditor.com/docs/ckeditor5).
 
 ## Usage
 
 ```
-import CKEditor from 'cloudhub-components/dist/CKEditor';
+import CKEditor from '@cloudhub-ux/core/CKEditor';
 ```
 
 ## Usage with Form
 
 ```js
-
-    import CKEditor from 'cloudhub-components/dist/CKEditor';
-    <Form
-      onSubmit={() => {}}
-      initialValues={{ Description: "Hello Africa" }}
-      render={() => {
-        return (
-          <Field
-            label="Description"
-            type="text"
-            name="Description"
-            component={CKEditor}
-            imageplugin
-            tableplugin
-          />
-        );
-      }}
-    />
-
+import CKEditor from '@cloudhub-ux/core/CKEditor';
+<Form
+  onSubmit={() => {}}
+  initialValues={{ Description: 'Hello Africa' }}
+  render={() => {
+    return (
+      <Field
+        label="Description"
+        type="text"
+        name="Description"
+        component={CKEditor}
+        imageplugin
+        tableplugin
+      />
+    );
+  }}
+/>;
 ```
 
-
 ## Props
-
-
-
 
 <Block>
     <table>

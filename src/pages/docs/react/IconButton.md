@@ -6,10 +6,9 @@ sidebar_label: IconButton
 
 ## IconButton
 
-
-import {Block, IconButton } from 'cloudhub-components';
-import Close from '@material-ui/icons/Close';
-import Menu from '@material-ui/icons/Menu';
+import {Block, IconButton } from '@cloudhub-ux/core';
+import Close from '@mui/icons-material/Close';
+import Menu from '@mui/icons-material/Menu';
 import {sizes, colors} from '../../../theme';
 
 IconButton component is implemented from the [Material-UI IconButtons](https://material-ui.com/components/buttons/).
@@ -17,28 +16,18 @@ IconButton component is implemented from the [Material-UI IconButtons](https://m
 ## Usage
 
 ```js
-import {Block, IconButton } from 'cloudhub-components';
+import { Block, IconButton } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, IconButton, Close, Menu}}>
 {
-`<Block row>
-    <IconButton>
-        <Close />
-    </IconButton>
-     <IconButton color={colors.gray4}>
-        <Menu />
-    </IconButton>
-</Block>`
+`<Block row> <IconButton> <Close /> </IconButton> <IconButton color={colors.gray4}> <Menu /> </IconButton> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

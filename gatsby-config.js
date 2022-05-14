@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'cloudhub-components',
+    title: 'cloudhub-ux',
     description: 'Components to help you build your next reactjs app.',
     author: '@cloudhubke',
   },
@@ -16,7 +16,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-material-ui',
+    'gatsby-plugin-top-layout',
+    'gatsby-plugin-mui-emotion',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

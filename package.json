@@ -1,13 +1,22 @@
 {
-  "name": "cloudhub-components-docs",
+  "name": "cloudhub-ux-docs",
   "private": true,
-  "description": "Documentation for the cloudhub components",
+  "description": "Documentation for the cloudhub ux",
   "version": "0.1.0",
   "author": "Bernard gaitho <gaithoben@gmail.com>",
   "dependencies": {
+    "@cloudhub-ux/core": "^0.60.0",
+    "@cloudhub-ux/svgicons": "^1.6.0",
+    "@emotion/cache": "^11.1.3",
+    "@emotion/react": "^11.4.1",
+    "@emotion/server": "^11.1.3",
+    "@emotion/styled": "^11.3.0",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "cloudhub-components": "^1.1.21",
+    "@mui/icons-material": "^5.0.1",
+    "@mui/lab": "^5.0.0-alpha.48",
+    "@mui/material": "^5.0.1",
+    "@mui/styles": "^5.0.1",
     "gatsby": "^2.17.6",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.2.25",
@@ -24,26 +33,28 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-live": "^2.2.1",
-    "react-use": "^13.5.0"
+    "react-use": "^13.5.0",
+    "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
+    "core-js": "^3.22.5",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^2.7.0",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf ../cloudhub-components/docs",
+    "prebuild": "rimraf ../cloudhub-ux-core/docs",
     "build": "gatsby build",
-    "postbuild": "mv public ../cloudhub-components/docs",
+    "postbuild": "mv public ../cloudhub-ux-core/docs",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",

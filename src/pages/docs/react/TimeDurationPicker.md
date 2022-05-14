@@ -6,8 +6,7 @@ sidebar_label: TimeDurationPicker
 
 ## TimeDurationPicker
 
-
-import {Block, TimeDurationPicker } from 'cloudhub-components';
+import {Block, TimeDurationPicker } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 TimeDurationPicker component is implemented from the [Material-UI TimeDurationPickers](https://material-ui.com/components/buttons/).
@@ -15,23 +14,18 @@ TimeDurationPicker component is implemented from the [Material-UI TimeDurationPi
 ## Usage
 
 ```js
-import {Block, TimeDurationPicker } from 'cloudhub-components';
+import { Block, TimeDurationPicker } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, TimeDurationPicker}}>
 {
-`<Block row>
-    <TimeDurationPicker />
-</Block>`
+`<Block row> <TimeDurationPicker /> </Block>`
 }
 </playground>
 
-
-
 ## Props
-
-
 
 <Block>
     <table>

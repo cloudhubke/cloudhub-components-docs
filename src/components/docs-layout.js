@@ -5,10 +5,10 @@ import {
   ListSubMenu,
   ListMenuItem,
   Text,
-} from 'cloudhub-components';
-import sizes from 'cloudhub-components/dist/theme/Sizes';
+} from '@cloudhub-ux/core';
+import sizes from '@cloudhub-ux/core/theme/Sizes';
 import { graphql, useStaticQuery, Link } from 'gatsby';
-import { useMetrics } from 'cloudhub-components/dist/customhooks';
+import { useMetrics } from '@cloudhub-ux/core/customhooks';
 import HomeLayout from './home-layout';
 import { colors } from '../theme';
 
@@ -86,6 +86,13 @@ const DocsLayout = ({ path, ...props }) => {
                     <Text>Colors Oject</Text>
                   </ListMenuItem>
                 </Link>
+                <Link to="/docs/getting-started/colors-tool">
+                  <ListMenuItem
+                    selected={`${path}`.includes('getting-started/colors-tool')}
+                  >
+                    <Text>Colors Tool</Text>
+                  </ListMenuItem>
+                </Link>
                 <Link to="/docs/getting-started/sizes">
                   <ListMenuItem
                     selected={`${path}`.includes('getting-started/sizes')}
@@ -104,7 +111,7 @@ const DocsLayout = ({ path, ...props }) => {
 
               <ListSubMenu
                 expanded
-                header="React Components"
+                header="ux/core"
                 headerIcon={null}
                 showHeaderIcon={false}
               >

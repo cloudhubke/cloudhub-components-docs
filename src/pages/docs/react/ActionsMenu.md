@@ -6,8 +6,7 @@ sidebar_label: ActionsMenu
 
 ## ActionsMenu
 
-
-import {Block, Button, ActionsMenu, ListMenu, ListMenuItem } from 'cloudhub-components';
+import {Block, Button, ActionsMenu, ListMenu, ListMenuItem } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 ActionsMenu component allows easy actions on a grid/card or any object.
@@ -15,35 +14,20 @@ ActionsMenu component allows easy actions on a grid/card or any object.
 ## Usage
 
 ```js
-import { ActionsMenu, ListMenu, ListMenuItem } from 'cloudhub-components';
+import { ActionsMenu, ListMenu, ListMenuItem } from '@cloudhub-ux/core';
 ```
 
 ### Example
 
 <playground scope={{Block, Button, ListMenu, ListMenuItem, ActionsMenu}}>
 {
-`<Block row  middle>
-    <ActionsMenu>
-        <ListMenu>
-            <ListMenuItem>Save</ListMenuItem>
-        </ListMenu>
-    </ActionsMenu>
-    <ActionsMenu anchorComponent={<Button>Menu</Button>}>
-        <ListMenu>
-            <ListMenuItem>Save all</ListMenuItem>
-            <ListMenuItem>Exit</ListMenuItem>
-        </ListMenu>
-    </ActionsMenu>
-</Block>`
+`<Block row middle> <ActionsMenu> <ListMenu> <ListMenuItem>Save</ListMenuItem> </ListMenu> </ActionsMenu> <ActionsMenu anchorComponent={<Button>Menu</Button>}> <ListMenu> <ListMenuItem>Save all</ListMenuItem> <ListMenuItem>Exit</ListMenuItem> </ListMenu> </ActionsMenu> </Block>`
 }
 </playground>
-
-
 
 ## Props
 
 Material UI props and
-
 
 <Block>
     <table>
@@ -55,5 +39,4 @@ Material UI props and
             <tr><td>children</td><td>Array  of ListMenuItem </td><td></td></tr>
         </tbody>
     </table>
-</Block>    
-
+</Block>

@@ -6,9 +6,8 @@ sidebar_label: Select
 
 ## Select
 
-
-import {Block } from 'cloudhub-components';
-import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selectors'
+import {Block } from '@cloudhub-ux/core';
+import {StaticListSelector, RemoteSelector} from '@cloudhub-ux/core/selectors'
 import {sizes} from '../../../theme';
 
 Select component is implemented from the [React-select](https://react-select.com).
@@ -16,32 +15,30 @@ Select component is implemented from the [React-select](https://react-select.com
 ## Usage
 
 ```js
-import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selectors'
-
+import {
+  StaticListSelector,
+  RemoteSelector,
+} from '@cloudhub-ux/core/selectors';
 ```
+
 ### Example
 
 <playground scope={{Block, StaticListSelector}}>
 {
-`<Block row>
-    <StaticListSelector key="1" options={['Male', 'Female']} />
-</Block>`
+`<Block row> <StaticListSelector key="1" options={['Male', 'Female']} /> </Block>`
 }
 </playground>
 
 <playground scope={{Block, StaticListSelector}}>
 {
-`<Block row>
-    <StaticListSelector key="2" options={[{name: 'Ben', age: 20}, {name: 'Angie', age: 5}]} labelExtractor={row=>row.name}/>
-</Block>`
+`<Block row> <StaticListSelector key="2" options={[{name: 'Ben', age: 20}, {name: 'Angie', age: 5}]} labelExtractor={row=>row.name}/> </Block>`
 }
 </playground>
-
 
 ## Usage in a form
 
 ```js
- import { StaticListSelector } | from 'cloudhub-components/dist/selectors';
+ import { StaticListSelector } | from '@cloudhub-ux/core/selectors';
     <Form
       onSubmit={() => {}}
       initialValues={{ }}
@@ -63,16 +60,12 @@ import {StaticListSelector, RemoteSelector} from 'cloudhub-components/dist/selec
 
 <playground scope={{Block, RemoteSelector}}>
 {
-`<Block row>
-    <RemoteSelector key="3" url={'https://jsonplaceholder.typicode.com/users'} 
-            labelExtractor={row=>row.name}
-            valueExtractor={row=>({name: row.name, email: row.email, username: row.username})}
-            />
-</Block>`
+`<Block row> <RemoteSelector key="3" url={'https://jsonplaceholder.typicode.com/users'} labelExtractor={row=>row.name} valueExtractor={row=>({name: row.name, email: row.email, username: row.username})} /> </Block>`
 }
 </playground>
 
 ## Props
+
 <Block>
     <table>
         <thead>

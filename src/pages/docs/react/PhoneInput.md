@@ -6,8 +6,7 @@ sidebar_label: PhoneInput
 
 ## PhoneInput
 
-
-import {Block, PhoneInput } from 'cloudhub-components';
+import {Block, PhoneInput } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 PhoneInput component for accepting and validating phone numbers
@@ -15,21 +14,18 @@ PhoneInput component for accepting and validating phone numbers
 ## Usage
 
 ```js
-import {Block, PhoneInput } from 'cloudhub-components';
+import { Block, PhoneInput } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, PhoneInput}}>
 {
-`<Block row>
-    <PhoneInput cca2="TZ"/>
-</Block>`
+`<Block row> <PhoneInput cca2="TZ"/> </Block>`
 }
 </playground>
 
 ## Props
-
-
 
 <Block>
     <table>

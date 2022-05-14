@@ -6,8 +6,7 @@ sidebar_label: Badge
 
 ## Badge
 
-
-import {Block, Badge, Text } from 'cloudhub-components';
+import {Block, Badge, Text } from '@cloudhub-ux/core';
 import {sizes, colors} from '../../../theme';
 
 Badge component is implemented from the `Block` component
@@ -15,25 +14,15 @@ Badge component is implemented from the `Block` component
 ## Usage
 
 ```js
-
 ```
 
 ### Example
 
 <playground scope={{Block, Badge, Text, sizes, colors}}>
 {
-`<Block row flex={false}>
-    <Badge size={64} color="accent">
-        <Text h4 milkyWhite>55</Text>
-    </Badge>
-    <Badge size={24} color="accent">
-        <Text milkyWhite>5</Text>
-    </Badge>
-</Block>`
+`<Block row flex={false}> <Badge size={64} color="accent"> <Text h4 milkyWhite>55</Text> </Badge> <Badge size={24} color="accent"> <Text milkyWhite>5</Text> </Badge> </Block>`
 }
 </playground>
-
-
 
 ## Props
 

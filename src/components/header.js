@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import {
-  Block,
-  Text,
-  Button,
-  IconButton,
-  Container,
-} from 'cloudhub-components';
-import { useMetrics } from 'cloudhub-components/dist/customhooks';
-import Menu from '@material-ui/icons/Menu';
+import { Block, Text, Button, IconButton, Container } from '@cloudhub-ux/core';
+import { useMetrics } from '@cloudhub-ux/core/customhooks';
+import Menu from '@mui/icons-material/Menu';
 
-import sizes from 'cloudhub-components/dist/theme/Sizes';
+import sizes from '@cloudhub-ux/core/theme/Sizes';
 import { colors, Images } from '../theme';
 
 const Header = React.forwardRef((props, ref) => {
@@ -82,7 +76,7 @@ const Header = React.forwardRef((props, ref) => {
                 </Button>
               </Link>
               <a
-                href="https://github.com/cloudhubke/cloudhub-components"
+                href="https://github.com/cloudhubke/@cloudhub-ux/core"
                 target="_blank"
                 rel="noopener noreferrer"
               >

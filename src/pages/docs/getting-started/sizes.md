@@ -6,8 +6,7 @@ sidebar_label: Sizes Object
 
 ## Sizes Object
 
-
-import { Block, Badge,  Text } from 'cloudhub-components';
+import { Block, Badge, Text } from '@cloudhub-ux/core';
 import {colors, sizes} from '../../../theme';
 
 Sizes Object is implemented to help pass common sizes as props to various components
@@ -16,11 +15,7 @@ Sizes Object is implemented to help pass common sizes as props to various compon
 
 <playground scope={{Block, Badge, Text, sizes, colors}}>
 {
-`<Block color={colors.successColor} row>
-    <Badge size={64} color="accent">
-        <Text h4 milkyWhite>55</Text>
-    </Badge>
-</Block>`
+`<Block color={colors.successColor} row> <Badge size={64} color="accent"> <Text h4 milkyWhite>55</Text> </Badge> </Block>`
 }
 </playground>
 
@@ -85,6 +80,4 @@ const sizes = {
 };
 
 export default sizes;
-
-
 ```

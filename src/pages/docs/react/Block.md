@@ -4,7 +4,7 @@ title: Block
 sidebar_label: Block
 ---
 
-import {Block, Text} from 'cloudhub-components';
+import {Block, Text} from '@cloudhub-ux/core';
 import {sizes, colors} from '../../../theme';
 
 ## Block
@@ -14,16 +14,14 @@ A block is just a `div` element used to format layout using the flex layout attr
 ## usage
 
 ```js
-import { Block } from 'cloudhub-components';
+import { Block } from '@cloudhub-ux/core';
 ```
 
 ## example
 
 <playground scope={{Block, Text}}>
 {
-`<Block color={colors.gray4} margin={sizes.margin} padding={sizes.padding} paper>
-    <Text>Hello World</Text> 
-</Block>`
+`<Block color={colors.gray4} margin={sizes.margin} padding={sizes.padding} paper> <Text>Hello World</Text> </Block>`
 }
 </playground>
 

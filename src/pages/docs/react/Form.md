@@ -6,8 +6,7 @@ sidebar_label: Form
 
 ## Form
 
-
-import {Block, Form } from 'cloudhub-components';
+import {Block, Form } from '@cloudhub-ux/core';
 import {sizes} from '../../../theme';
 
 Form component is implemented from the [React Final Form](https://github.com/final-form/react-final-form).
@@ -15,24 +14,20 @@ Form component is implemented from the [React Final Form](https://github.com/fin
 ## Usage
 
 ```js
-import {Block, Form, Field } from 'cloudhub-components';
+import { Block, Form, Field } from '@cloudhub-ux/core';
 ```
+
 ### Example
 
 <playground scope={{Block, Form}}>
 {
-`<Block row>
-Form
-</Block>`
+`<Block row> Form </Block>`
 }
 </playground>
-
-
 
 ## Form Props
 
 Please check the [react-final-form Form props](https://github.com/final-form/react-final-form)
-
 
 ## Field Props
 
