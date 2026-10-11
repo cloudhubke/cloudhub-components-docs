@@ -54,7 +54,7 @@
   "scripts": {
     "prebuild": "rimraf ../cloudhub-ux-core/docs",
     "build": "gatsby build",
-    "postbuild": "mv public ../cloudhub-ux-core/docs",
+    "postbuild": "mv public ../cloudhub-ux-core/docs && cp netlify.toml ../cloudhub-ux-core/docs/netlify.toml",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
